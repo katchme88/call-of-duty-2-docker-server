@@ -1,7 +1,9 @@
 version: '3.6'
 services:
   cod2_server:
-    image: bgauduch/cod2-server:latest
+    build:
+      dockerfile: Dockerfile
+      context: .
     ports:
       - "20500:20500/udp"
       - "20510:20510/udp"
